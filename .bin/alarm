@@ -1,0 +1,22 @@
+#!/bin/sh
+
+min_to_sec()
+{
+	expr $1 \* 60
+}
+
+
+if [ "$#" = "0" ];
+then
+(sleep 3600; zenity --info --text="One Hour is Up\!") &
+elif [ "$#" = "1" ]; 
+then
+time_in_sec=`min_to_sec $1`
+(sleep $time_in_sec; zenity --info --text="$1 mins have passed\!") &
+elif [ "$#" = "2" ]; 
+then
+time_in_sec=`min_to_sec $1`
+(sleep $time_in_sec; zenity --info --text=$2) &
+fi
+
+

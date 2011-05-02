@@ -1,0 +1,37 @@
+#!/bin/sh
+
+day_to_pucount ()
+  {
+	if [ $1 -ge 319 ]
+	then
+	expr $1 - 318
+	else
+	expr $1 + 46
+	fi
+  }
+
+total_pu ()
+  {
+	today=`date +%j`
+	suppose=`day_to_pucount $today`
+	sum=0
+	while [ $suppose -ge 0 ]
+	do
+	sum=`expr $sum + $suppose`
+	suppose=`expr $suppose - 1`
+	done
+	echo $sum 
+  }
+ 
+count_pu ()
+  {
+	actual=`cat ~/.config/pulog | awk '{SUM+=$2}; END {print SUM}'`
+	expr `total_pu` - ${actual:-0}
+  }
+
+if [ "$#" = "1" ]; 
+then
+echo "`date +%j`\t$1" >> ~/.config/pulog
+fi
+count_pu
+
