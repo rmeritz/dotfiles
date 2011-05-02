@@ -1,0 +1,2 @@
+io:format("Top of the morning to you.~n").
+code:add_patha("/home/rebecca/Erlang").
