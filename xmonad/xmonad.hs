@@ -12,4 +12,5 @@ main = xmonad  $ additionalKeysP (gnomeConfig {workspaces = (map show [1..6])})
               , ("C-M1-<Right>",   nextWS )
               , ("C-M1-S-<Left>",  shiftToPrev>>prevWS )
               , ("C-M1-S-<Right>", shiftToNext>>nextWS )
+              , ("C-w", kill)
               ]
