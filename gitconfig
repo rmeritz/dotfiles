@@ -1,2 +1,5 @@
 [user]
 	name = Rebecca Meritz
+	email = rebecca@meritz.com
+[color]
+	status = auto

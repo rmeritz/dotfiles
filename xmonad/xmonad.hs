@@ -3,7 +3,7 @@ import XMonad.Config.Gnome
 import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
 
-main = xmonad $ additionalKeysP (gnomeConfig )
+main = xmonad  $ additionalKeysP (gnomeConfig {workspaces = (map show [1..6])})
               [
               --open terminal
               ("M4-t", spawn "gnome-terminal")
