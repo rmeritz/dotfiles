@@ -1,2 +1,5 @@
 alias rm='/bin/rm -i'
+alias uninstall='sudo apt-get remove'
+alias gs='git status -sb'
+alias ga='git add -A'
 alias ag='sudo apt-get install'
