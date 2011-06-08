@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# This script takes all the pdfs of two directories, compares them
+# with a checksums saves in third directory 
+# and differences are outputted to the shell
+
+
+org_dir="$1"
+mod_dir="$2"
+dir_result="$3"
+
+# save current dir
+pwd=$(pwd)"/"
+
+# create file of orginal checksums
+cd $org_dir
+find . -type f 2>/dev/null -exec md5sum {} \; >$pwd$dir_result"orginals_sums.txt"
+
+# create file of modified files checksums
+cd $pwd$mod_dir
+find . -type f 2>/dev/null -exec md5sum {} \; >$pwd$dir_result"modifed_sums.txt"
+cd $pwd
+
+#perform diff on two lists of sums 
+diff $pwd$dir_result"orginals_sums.txt" $pwd$dir_result"modifed_sums.txt"
