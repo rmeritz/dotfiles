@@ -100,8 +100,6 @@ fi
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
-
 fi
 
-export PATH=$PATH:~/.bin:.
 export PS1='\[\033[00;33m\]\u\[\033[00m\] \w\$ '

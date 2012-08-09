@@ -1,2 +1,24 @@
-io:format("Top of the morning to you.~n").
-code:add_patha("/home/rebecca/Erlang").
+F = fun(Dir) ->
+        R = os:cmd(lists:flatten(io_lib:format("find ~s/ -name *.beam",
+                                               ["/home/rebecca/git/klarna/" ++ Dir]))),
+        string:tokens(R,"\n")
+    end.
+
+List =  lists:foldr(F, [], ["dev"
+                           ,"pay"
+                           ,"yarc"
+                           ,"riak"
+                           ,"OTP"
+                           ,"desmond"
+                           ,"rebar"
+                           ]).
+
+Pathz = lists:foldl(fun(D, Acc) ->
+                        DName = filename:dirname(D),
+                        case lists:member(DName, Acc) of
+                          true  -> Acc;
+                          false -> [DName|Acc]
+                        end
+                    end, [], List).
+
+code:add_pathsz(Pathz).
