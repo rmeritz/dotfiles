@@ -29,13 +29,19 @@
      (color-theme-initialize)
      (color-theme-hober)))
 
-
+;; pip install flake8
 (setq flymake-python-pyflakes-executable "flake8")
+(add-to-list 'load-path "~/.emacs.d/flymake-python-pyflakes")
 (require 'flymake-python-pyflakes)
 (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+(load-file "~/.emacs.d/flymake-python-pyflakes/flymake-customizations.el")
 
+;; pip install epc jedi
 (require 'auto-complete)
 (setq jedi:setup-keys t)
 (autoload 'jedi:setup "jedi" nil t)
 (add-hook 'python-mode-hook 'jedi:setup)
 (add-hook 'python-mode-hook 'auto-complete-mode)
+(custom-set-faces
+ '(flymake-errline ((((class color)) (:background "red"))))
+ '(flymake-warnline ((((class color)) (:underline "red")))))
