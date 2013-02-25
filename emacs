@@ -45,3 +45,6 @@
 (custom-set-faces
  '(flymake-errline ((((class color)) (:background "red"))))
  '(flymake-warnline ((((class color)) (:underline "red")))))
+
+(global-set-key (kbd "C-c #") 'comment-region)
+(global-set-key (kbd "C-x #") 'uncomment-region)
