@@ -23,12 +23,15 @@
       (setq the-plist (cddr the-plist)))
   alist))
 
+;; M-x package-install color-theme
 (require 'color-theme)
 (eval-after-load "color-theme"
   '(progn
      (color-theme-initialize)
      (color-theme-hober)))
 
+;; sudo apt-get install flake8
+;; git clone git@github.com:rmeritz/flymake-python-pyflakes.git
 ;; pip install flake8
 (setq flymake-python-pyflakes-executable "flake8")
 (add-to-list 'load-path "~/.emacs.d/flymake-python-pyflakes")
@@ -36,6 +39,7 @@
 (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
 (load-file "~/.emacs.d/flymake-python-pyflakes/flymake-customizations.el")
 
+;; M-x package-install jedi auto-complete
 ;; pip install epc jedi
 (require 'auto-complete)
 (setq jedi:setup-keys t)
@@ -48,3 +52,10 @@
 
 (global-set-key (kbd "C-c #") 'comment-region)
 (global-set-key (kbd "C-x #") 'uncomment-region)
+
+;; git clone git://github.com/antonj/scss-mode.git
+(setq exec-path (cons (expand-file-name "/usr/local/bin") exec-path))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/scss-mode"))
+(autoload 'scss-mode "scss-mode")
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+(add-hook 'scss-mode-hook 'flymake-mode)
