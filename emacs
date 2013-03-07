@@ -39,7 +39,7 @@
 (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
 (load-file "~/.emacs.d/flymake-python-pyflakes/flymake-customizations.el")
 
-;; M-x package-install jedi auto-complete
+;; M-x package-install jedi auto-complete flymake
 ;; pip install epc jedi
 (require 'auto-complete)
 (setq jedi:setup-keys t)
