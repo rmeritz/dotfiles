@@ -63,11 +63,17 @@
 
 (setq ac-ignore-case nil)
 
- (setq load-path (cons  "/usr/lib/erlang/lib/tools-2.6.7/emacs"
-      load-path))
-      (setq erlang-root-dir "/usr/lib/erlang")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq load-path (cons "/usr/lib/erlang/lib/tools-2.6.7/emacs" load-path))
+      (setq erlang-root-dir "/usr/lib/erlang") 
       (setq exec-path (cons "/usr/lib/erlang/bin/" exec-path))
 (require 'erlang-start)
+
+;; remove erlang tabs
+(setq-default indent-tabs-mode nil)
+(setq erlang-indent-level 2)
+(local-set-key [return] 'newline-and-indent)
 
  ;; git clone git://github.com/tjarvstrand/edts.git
  ;; cd edts; make
