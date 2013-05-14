@@ -3,5 +3,6 @@
 	email = rebecca@meritz.com
 [color]
 	status = auto
+        diff = auto
 [core]
 	excludesfile = /home/rebecca/.gitignore_global

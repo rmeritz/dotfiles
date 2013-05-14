@@ -5,3 +5,6 @@
 *~
 *flymake.css
 *.orig
+venv
+*flymake.py
+dump.rdb
