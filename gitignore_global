@@ -8,3 +8,5 @@
 venv
 *flymake.py
 dump.rdb
+*.swp
+*.swo
