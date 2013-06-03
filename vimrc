@@ -1,8 +1,11 @@
 set background=dark
 set ruler
-set tabstop=4
+set number
 set autoindent
-set number 
+set softtabstop=4
+set shiftwidth=4
+set textwidth=80
+set smarttab
 set expandtab
 
 " Tab completion
