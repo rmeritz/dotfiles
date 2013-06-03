@@ -14,3 +14,5 @@ syntax on
 
 " Open a file in the current file's path
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+source ~/.vim/vundle
