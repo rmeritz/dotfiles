@@ -1,1 +1,2 @@
 Bundle 'rmeritz/syntastic'
+Bundle 'rmeritz/jedi-vim'
