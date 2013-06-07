@@ -8,6 +8,11 @@ set textwidth=80
 set smarttab
 set expandtab
 
+" Better Buffer handling
+set hidden
+set wildchar=<Tab> wildmenu wildmode=full
+let g:switchbuf="useopen,usetab"
+
 " Tab completion
 set complete=.,b,u,]
 set wildmode=longest,list:longest
