@@ -8,12 +8,16 @@ set textwidth=80
 set smarttab
 set expandtab
 
+" Better Buffer handling
+set hidden
+set wildchar=<Tab> wildmenu wildmode=full
+let g:switchbuf="useopen,usetab"
+
 " map CTRL-E to end-of-line (insert mode)
 imap <C-e> <esc>$i<right>
 " map CTRL-A to beginning-of-line (insert mode)
 imap <C-a> <esc>0i
 cmap <C-a> <home>
-
 " Tab completion
 set complete=.,b,u,]
 set wildmode=longest,list:longest
