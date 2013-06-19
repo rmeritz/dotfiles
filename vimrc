@@ -8,6 +8,12 @@ set textwidth=80
 set smarttab
 set expandtab
 
+" map CTRL-E to end-of-line (insert mode)
+imap <C-e> <esc>$i<right>
+" map CTRL-A to beginning-of-line (insert mode)
+imap <C-a> <esc>0i
+cmap <C-a> <home>
+
 " Tab completion
 set complete=.,b,u,]
 set wildmode=longest,list:longest
@@ -17,6 +23,8 @@ syntax on
 
 " Open a file in the current file's path
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+" Open a file in the current file's path in a tab
+map <Leader>t :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " Vundles for package management
 " RUN: :BundleInstall
