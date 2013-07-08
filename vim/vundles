@@ -1,3 +1,4 @@
 Bundle 'rmeritz/syntastic'
 Bundle 'rmeritz/jedi-vim'
+Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/django.vim'
