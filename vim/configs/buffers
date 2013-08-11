@@ -1,0 +1,4 @@
+" Better Buffer handling
+set hidden
+set wildchar=<Tab> wildmenu wildmode=full
+let g:switchbuf="useopen,usetab"
