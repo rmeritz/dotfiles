@@ -1,0 +1,1 @@
+au BufNewFile,BufRead *.scss  set softtabstop=2 shiftwidth=2
