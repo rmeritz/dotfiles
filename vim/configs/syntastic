@@ -1,5 +1,6 @@
 " Syntastic (Flymake for vim)
 " RUN: pip install flake8
+" RUN: npm install -g jslint
 let g:syntastic_error_symbol='✗✗'
 let g:syntastic_warning_symbol='⚠⚠'
 let g:syntastic_ignore_files=['__init__.py']
