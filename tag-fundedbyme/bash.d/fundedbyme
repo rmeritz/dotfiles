@@ -1,4 +1,5 @@
-alias sass_watch='title sass; cd ~/fundedbyme/fundedbyme/fundedbyme/static/css; sass --watch sass:. --style compressed'
+alias f='title fundedbyme; cd ~/fundedbyme/fundedbyme/; venv; gsh'
+alias watch='title compass; cd ~/fundedbyme/fundedbyme/; compass watch'
 alias foreman='title foreman; cd ~/fundedbyme/fundedbyme; venv; foreman start'
 alias shell='title shell; cd ~/fundedbyme/fundedbyme; venv; ./manage.py shell'
 alias dbshell='title psql; cd ~/fundedbyme/fundedbyme; venv; ./manage.py dbshell'
