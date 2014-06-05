@@ -6,9 +6,15 @@
         diff = auto
 [core]
 	excludesfile = /home/rebecca/.gitignore_global
+[push]
+        default = current
 [gitsh]
         defaultCommand = status -s
 [alias]
         co = checkout
         a = add -p
+        aa = add .
         c = commit -m
+        p = push
+        s = status -s
+        pr = pull-request
