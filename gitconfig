@@ -10,6 +10,7 @@
         default = current
 [gitsh]
         defaultCommand = status -s
+	gitCommand = /usr/bin/hub
 [alias]
         co = checkout
         a = add -p
