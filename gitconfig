@@ -1,3 +1,5 @@
+[init]
+        templatedir = ~/.git_template
 [user]
 	name = Rebecca Meritz
 	email = rebecca@meritz.com
@@ -16,6 +18,8 @@
         a = add -p
         aa = add .
         c = commit -m
+        cv = commit -v
         p = push
         s = status -s
         pr = pull-request
+        ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
