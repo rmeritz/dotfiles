@@ -1,0 +1,11 @@
+set from="rebecca.meritz@hemnet.se"
+set realname='Rebecca Meritz'
+set imap_user="rebecca.meritz@hemnet.se"
+set imap_keepalive=900   # Set lower if connection times out
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+
+set sendmail="/usr/bin/msmtp"
+my_hdr From: "Rebecca Meritz"
+
+source '/home/rebecca/.bin/mutt-password|'
