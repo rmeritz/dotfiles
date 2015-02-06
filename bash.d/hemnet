@@ -1,0 +1,2 @@
+git clone git@github.com:hemnet/hemnet-terminal-command.git hemnet
+eval "$(/home/rebecca/hemnet/bin/hemnet init -)"
