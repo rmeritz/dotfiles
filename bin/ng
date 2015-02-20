@@ -1,26 +1,0 @@
-#!/bin/sh
-
-open_new_tab() {
-  WID=$(xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)" | awk '{print $5}')
-  xdotool windowfocus $WID
-  xdotool key ctrl+shift+t
-}
-
-gnome-terminal
-WiD=$(xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| awk '{print $5}')
-xdotool windowfocus $WID
-sleep 1
-
-xdotool type "cd ~/hemnet-ng && title git ng && gsh"
-
-open_new_tab
-xdotool type "cd ~/hemnet-ng && title tests"
-
-open_new_tab
-xdotool type "cd ~/hemnet-ng && title server && server"
-
-open_new_tab
-xdotool type "cd ~/hemnet-ng && title console && console "
-
-open_new_tab
-xdotool type "cd ~/hemnet-ng && title dbconsole && dbconsole "

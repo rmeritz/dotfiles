@@ -41,3 +41,39 @@ dbconsole() {
     return 1
   fi
 }
+
+open_new_tab() {
+  WID=$(xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)" | awk '{print $5}')
+  xdotool windowfocus $WID
+  xdotool key ctrl+shift+t
+}
+
+rails_setup_tabs() {
+  BASENAME=`basename $DIR`
+
+  xdotool type "cd $DIR && title git && gsh"
+
+  open_new_tab
+  xdotool type "cd $DIR && title $BASENAME"
+
+  open_new_tab
+  xdotool type "cd $DIR && title server && server"
+
+  open_new_tab
+  xdotool type "cd $DIR && title console && console "
+
+  open_new_tab
+  xdotool type "cd $DIR && title dbconsole && dbconsole "
+
+  xdotool key alt+1
+}
+
+ng() {
+  DIR=~/hemnet-ng
+  rails_setup_tabs
+}
+
+kp() {
+  DIR=~/kundportalen
+  rails_setup_tabs
+}
