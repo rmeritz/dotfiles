@@ -51,7 +51,8 @@ open_new_tab() {
 rails_setup_tabs() {
   BASENAME=`basename $DIR`
 
-  xdotool type "gvim& +'cd $DIR'; cd $DIR && title git && gsh"
+  xdotool type "cd $DIR && gvim& ."
+  xdotool type "cd $DIR && title git && gsh"
 
   open_new_tab
   xdotool type "cd $DIR && title $BASENAME"
