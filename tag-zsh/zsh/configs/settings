@@ -1,0 +1,5 @@
+READNULLCMD=less
+cdpath=(~)
+setopt correct
+setopt auto_cd
+unsetopt nomatch

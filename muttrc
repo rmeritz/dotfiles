@@ -11,3 +11,6 @@ source '/home/rebecca/.bin/mutt-password|'
 
 set autoedit
 set edit_headers
+
+set mime_forward=yes
+set mime_forward_rest=yes

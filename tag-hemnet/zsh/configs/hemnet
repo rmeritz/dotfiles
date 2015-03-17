@@ -1,0 +1,1 @@
+eval "$(/home/rebecca/hemnet/bin/hemnet init - zsh)"
