@@ -79,3 +79,8 @@ kp() {
   DIR=~/kundportalen
   rails_setup_tabs
 }
+
+bs() {
+  DIR=~/broker-stats
+  rails_setup_tabs
+}
