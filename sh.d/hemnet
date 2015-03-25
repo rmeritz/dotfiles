@@ -1,11 +1,12 @@
 spec() {
   if [ -x script/spec ]; then
-    bundle exec spec "$*"
+    bundle exec spec $@
   elif [ -x bin/rspec ]; then
-    bundle exec rspec "$*"
+    bundle exec rspec $@
+  elif [ -x bin/rspec ]; then
+    bundle exec rspec $@
   else
-    echo "Unknown spec runner" >&2
-    return 1
+    rake test
   fi
 }
 
