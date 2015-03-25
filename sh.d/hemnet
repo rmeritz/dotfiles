@@ -1,10 +1,10 @@
 spec() {
   if [ -x script/spec ]; then
-    bundle exec spec "$*"
+    bundle exec spec $@
   elif [ -x bin/rspec ]; then
-    bundle exec rspec "$*"
+    bundle exec rspec $@
   else
-    echo "Unknown spec runner" >&2
+    echo "Unknown server runner" >&2
     return 1
   fi
 }
@@ -65,6 +65,8 @@ rails_setup_tabs() {
 
   open_new_tab
   xdotool type "cd $DIR && title dbconsole && dbconsole "
+  sleep 1
+  xdotool type "rebecca"
 
   xdotool key super+Right
   xdotool key alt+1
