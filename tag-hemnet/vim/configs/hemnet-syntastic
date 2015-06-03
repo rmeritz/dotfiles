@@ -1,0 +1,2 @@
+let g:syntastic_ruby_rubocop_args = "-c /home/rebecca/hemnet-ng/.ruby-style.yml"
+let g:syntastic_javascript_jshint_args = "-c /home/rebecca/hemnet-ng/.javascript-style.json"

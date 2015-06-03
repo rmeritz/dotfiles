@@ -1,8 +1,16 @@
 " Syntastic (Flymake for vim)
 " RUN: pip install flake8
-" RUN: npm install -g jslint
+" RUN: npm install -g jshint
+" RUN: gem install rubocop
+" RUN: rbenv rehash
+
 let g:syntastic_error_symbol='✗✗'
 let g:syntastic_warning_symbol='⚠⚠'
 let g:syntastic_ignore_files=['__init__.py']
+let g:syntastic_ruby_rubocop_exec = "/home/rebecca/.rbenv/shims/rubocop"
 highlight SyntasticErrorSign guifg=white guibg=red
 highlight SyntasticWarningSign guifg=white guibg=blue
+
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_python_checkers=['flake8']

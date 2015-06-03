@@ -1,5 +1,5 @@
 Plugin 'gmarik/Vundle.vim'
-Plugin 'rmeritz/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'rmeritz/jedi-vim'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-scripts/django.vim'
