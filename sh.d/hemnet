@@ -11,7 +11,7 @@ spec() {
 
 server() {
   if [ -x script/server ]; then
-    bundle exec ./script/server -p 3000
+    bundle exec ./script/server webrick -p 3000
   elif [ -x bin/rails ]; then
     ./bin/rails s -p 3001
   else
