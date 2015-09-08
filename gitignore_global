@@ -10,3 +10,4 @@ venv
 dump.rdb
 *.swp
 *.swo
+*swn*
