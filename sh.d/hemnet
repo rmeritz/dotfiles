@@ -86,3 +86,22 @@ bs() {
   DIR=~/broker-stats
   rails_setup_tabs
 }
+
+tiles() {
+  DIR=~/hemnet-tiles
+
+  xdotool type "cd $DIR && gvim& ."
+  xdotool type "cd $DIR && title git && gsh"
+
+  open_new_tab
+  xdotool type "cd $DIR && title tilesE"
+
+  open_new_tab
+  xdotool type "cd $DIR && title server && node app.js"
+
+  open_new_tab
+  xdotool type "cd $DIR && title console && node"
+
+  xdotool key super+Right
+  xdotool key alt+1
+}
