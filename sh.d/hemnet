@@ -1,6 +1,6 @@
 spec() {
   if [ -x script/spec ]; then
-    bundle exec spec $@
+    bundle exec spec --color -f nested $@
   elif [ -x bin/rspec ]; then
     bundle exec rspec $@
   else
@@ -84,6 +84,11 @@ kp() {
 
 bs() {
   DIR=~/broker-stats
+  rails_setup_tabs
+}
+
+bn() {
+  DIR=~/bygganytt
   rails_setup_tabs
 }
 
