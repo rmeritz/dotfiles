@@ -11,3 +11,4 @@ dump.rdb
 *.swp
 *.swo
 *swn*
+.syntastic_c_config

@@ -23,3 +23,5 @@
         s = status -s
         pr = pull-request
         ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
+[credential]
+	helper = cache
