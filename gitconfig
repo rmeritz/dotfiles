@@ -15,13 +15,19 @@
 	gitCommand = /usr/bin/hub
 [alias]
         co = checkout
+        an = add -N .
         a = add -p
         aa = add .
         c = commit -m
         cv = commit -v
+        ca = commit --amend -v
+        caa = commit --amend -C HEAD
         p = push
         s = status -s
         pr = pull-request
+        r = reset
         ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
 [credential]
 	helper = cache
+[help]
+  autocorrect = 1
