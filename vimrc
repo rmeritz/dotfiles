@@ -4,6 +4,11 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 source ~/.vim/vundles
+
+if filereadable(expand("~/.vim/vundles.local"))
+  source ~/.vim/vundles.local
+endif
+
 call vundle#end()
 filetype plugin indent on
 
