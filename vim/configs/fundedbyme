@@ -1,4 +1,0 @@
-" Open files in frequently accessed locations
-map <Leader>f :e /home/rebecca/fundedbyme/fundedbyme/
-map <Leader>p :e /home/rebecca/fundedbyme/venv/lib/python2.7/site-packages/
-map <Leader>m :e /tmp/

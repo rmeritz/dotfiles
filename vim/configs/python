@@ -2,3 +2,6 @@
 
 autocmd BufNewFile,BufRead *.py setlocal shiftwidth=4
 autocmd BufNewFile,BufRead *.py setlocal softtabstop=4
+
+let g:syntastic_ignore_files=['__init__.py']
+let g:syntastic_python_checkers=['flake8']
