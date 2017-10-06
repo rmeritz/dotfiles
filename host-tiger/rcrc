@@ -1,2 +1,2 @@
-DOTFILES_DIRS="/home/rebecca/dotfiles"
+DOTFILES_DIRS="/home/rebecca/dotfiles /home/rebecca/context-dotfiles"
 TAGS="gnome git rbenv zsh"

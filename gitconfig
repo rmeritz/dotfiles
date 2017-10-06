@@ -24,6 +24,7 @@
         caa = commit --amend -C HEAD
         p = push
         s = status -s
+        st = status
         pr = pull-request
         r = reset
         ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
