@@ -1,8 +1,0 @@
-let g:syntastic_error_symbol='✗✗'
-let g:syntastic_warning_symbol='⚠⚠'
-let g:syntastic_ruby_rubocop_exec = "rubocop"
-highlight SyntasticErrorSign guifg=white guibg=red
-highlight SyntasticWarningSign guifg=white guibg=blue
-
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
-let g:syntastic_javascript_checkers = ['jshint']
