@@ -1,0 +1,6 @@
+[user]
+  name = Rebecca Meritz
+  email = rebecca@meritz.com
+[gitsh]
+  gitCommand = /usr/bin/hub
+
