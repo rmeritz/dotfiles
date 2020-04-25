@@ -4,3 +4,6 @@ bindkey "^E" end-of-line
 bindkey "^R" history-incremental-search-backward
 bindkey "^K" kill-line
 bindkey -s "^T" '^[maIsudo ^[`a5l'
+
+export VISUAL=/usr/bin/vim
+export EDITOR=/usr/bin/vi
