@@ -1,0 +1,19 @@
+set background=dark
+set ruler
+set number
+set autoindent
+set softtabstop=2
+set shiftwidth=2
+set textwidth=80
+set smarttab
+set expandtab
+set backspace=indent,eol,start " Let backspace work over anything.
+set showmatch                   " Show matching brackets
+set splitright                  " Add new windows towards the right
+set splitbelow                  " ... and bottom
+set autoread                    " No prompt for file changes outside Vim
+set swapfile                    " Keep swapfiles
+set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
+set backupdir=~/.vim-tmp,~/tmp,/var/tmp,/tmp
+set hls                         " search with highlights by default
+

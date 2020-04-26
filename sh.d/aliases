@@ -1,1 +1,10 @@
 alias ls='ls --color=auto'
+alias rm='rm -i'
+alias mkdir='mkdir -p'
+alias ln='ln -v'
+alias rcup='rcup -v'
+
+alias gsh='gitsh'
+
+alias be='bundle exec'
+alias migrate="be rake db:migrate db:rollback && be rake db:migrate db:test:prepare"

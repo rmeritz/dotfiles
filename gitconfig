@@ -1,0 +1,39 @@
+[color]
+  status = auto
+  diff = auto
+[core]
+  excludesfile = ~/.gitignore_global
+[push]
+  default = current
+[gitsh]
+  defaultCommand = status -s
+[alias]
+  co = checkout
+  an = add -N .
+  a = add -p
+  aa = add .
+  cm = commit -m
+  c = commit -v
+  ca = commit --amend -v
+  caa = commit --amend -C HEAD
+  p = push
+  pf = push --force-with-lease
+  s = status -s
+  st = status
+  pr = pull-request
+  r = reset
+  rum = rebase master@{u}
+  lum = log ...master@{u}
+  lp = log ...origin/production --left-right --oneline
+  f = fetch --all
+[credential]
+  helper = cache
+[help]
+  autocorrect = 1
+[include]
+  path = ~/.git.d/communal
+[user]
+  name = Rebecca Meritz
+  email = rebecca@meritz.com
+[gitsh]
+  gitCommand = /usr/local/bin/hub

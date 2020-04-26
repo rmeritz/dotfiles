@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ $# -lt 1 ]; then
+  echo "usage: kill-port <port-number>"
+  exit 1
+fi
+
+lsof -lni :$1 | sed -n 2p | awk '{print $2}' | xargs -r kill -INT
+lsof -lni :$1 | sed -n 2p | awk '{print $2}' | xargs -r kill -TERM
+lsof -lni :$1 | sed -n 2p | awk '{print $2}' | xargs -r kill -KILL

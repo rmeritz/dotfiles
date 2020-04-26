@@ -4,6 +4,9 @@
 [._]s[a-rt-v][a-z]
 [._]ss[a-gi-z]
 [._]sw[a-p]
+*.#*
+*#
+*.orig
 
 # Session
 Session.vim
@@ -15,3 +18,11 @@ Session.vim
 tags
 # Persistent undo
 [._]*.un~
+
+# Python
+*flymake.css
+*flymake.py
+venv
+
+# Syntastic
+.syntastic_c_config
