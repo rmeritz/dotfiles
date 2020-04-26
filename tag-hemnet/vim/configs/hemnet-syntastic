@@ -1,2 +1,0 @@
-let g:syntastic_ruby_rubocop_args = "-c /home/rebecca/hemnet-ng/.rubocop.yml"
-let g:syntastic_javascript_jshint_args = "-c /home/rebecca/hemnet-ng/.jshintrc"
