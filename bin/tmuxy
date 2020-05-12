@@ -1,0 +1,20 @@
+#!/bin/sh
+
+cd "${1:-$PWD}"
+
+is_new_session=0
+session_name="$(basename "$PWD" | sed -e "s/\./-/g")"
+
+if ! tmux has-session -t "${session_name}" 2>/dev/null; then
+  is_new_session=1
+fi
+
+muxhere $*
+
+if [ $is_new_session -eq 1 -a -d .git ]; then
+  tmux new-window -t "${session_name}" -c "${PWD}" -n gitsh
+  tmux new-window -t "${session_name}" -c "${PWD}" -n sh
+
+  tmux send-keys -t "${session_name}:1" vim C-m
+  tmux send-keys -t "${session_name}:2" gitsh C-m
+fi
