@@ -1,8 +1,6 @@
 [color]
   status = auto
   diff = auto
-[core]
-  excludesfile = ~/.gitignore_global
 [push]
   default = current
 [gitsh]
