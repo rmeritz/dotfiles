@@ -27,4 +27,4 @@ Plugin 'vim-scripts/django.vim'
 Plugin 'szw/vim-tags'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'editorconfig/editorconfig-vim'
-
+Plugin 'fatih/vim-go'
