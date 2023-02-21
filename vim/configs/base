@@ -17,3 +17,9 @@ set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 set backupdir=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 set hls                         " search with highlights by default
 
+" different in Neovim
+set nohidden
+set wildchar=<TAB>
+set wildmode=longest,list:longest
+set startofline
+set mouse=
