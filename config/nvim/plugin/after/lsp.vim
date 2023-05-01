@@ -30,7 +30,7 @@ if executable('rustup') || executable('solargraph')
         end
 
         if client.server_capabilities.documentFormattingProvider then
-          vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+          vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format({timeout_ms = 1000})]]
         end
       end,
     })
@@ -41,10 +41,13 @@ if executable('rustup') || executable('solargraph')
       flags = { debounce_text_changes = 150 },
       settings = {
         solargraph = {
-          diagnostics = true,
-          formatting = true
+          diagnostics = true
         }
-      }
+      },
+      init_options = { formatting = false }
+    }
+
+    nvim_lsp.standardrb.setup {
     }
 
     nvim_lsp.rust_analyzer.setup {
